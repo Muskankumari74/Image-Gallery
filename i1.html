@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>My Image Gallery</h1>
+
+  <div class="filter-buttons">
+    <button onclick="filterImages('all')">All</button>
+    <button onclick="filterImages('nature')">Nature</button>
+    <button onclick="filterImages('animals')">Animals</button>
+  </div>
+
+  <div class="gallery">
+    <div class="image-box nature"><img src="n1.jpg" alt="Nature 1" onclick="openLightbox(this)"/></div>
+    <div class="image-box animals"><img src="animal1.jpg" alt="Animal 1" onclick="openLightbox(this)"/></div>
+    <div class="image-box nature"><img src="n2.jpg" alt="Nature 2" onclick="openLightbox(this)"/></div>
+    <div class="image-box animals"><img src="animal2.jpg" alt="Animal 2" onclick="openLightbox(this)"/></div>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
